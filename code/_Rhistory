@@ -1,0 +1,512 @@
+x <- seq(-10, 10, by = .5)
+x
+sd(x)
+y <- dnorm(x, mean = mean(x), sd = sd(x))
+y
+plot(x,y)
+plot(x,y)
+x <- c(2,2,2,2,2,3,3,3,4,4,4,4,5,5,6,7,9)
+y <- dnorm(x, mean = mean(x), sd = sd(x))
+plot(x,y)
+###### categorical vaiable
+grade <- c("D","D","F","F","F","F","F","S","S","S","S","S","T","T","T")
+barplot(table(grade))
+age <- c(seq(10,100,by=2),seq(101,140))
+hist(age)
+mod(v1)
+Mod(v1)
+setwd("E:/Desktop Backups/17 Desktop 9Sep18/iPrimed/TTT/DAY 3/Session 1")
+myRandomVariables<-rbeta(10000,5,2)*10
+hist(myRandomVariables)
+myRandomVariables<-lbeta(10000,5,2)*10
+mean(myRandomVariables)
+sd(myRandomVariables)
+y <- dnorm(myRandomVariables, mean = mean(myRandomVariables), sd = sd(myRandomVariables))
+plot(myRandomVariables,y)
+mean(myRandomVariables)
+sd(myRandomVariables) #
+sdErr1 <- sd(myRandomVariables)/sqrt(100)
+sdErr1
+sdErr1 <- sd(myRandomVariables)/sqrt(sampSize)
+# sampling
+n <- 100
+sampSize <- 30
+xbar <- rep(NA, n)
+for(i in 1:10){
+mySamp <- sample(myRandomVariables, size = sampSize)
+xbar[i] <- mean(mySamp)
+}
+sdErr1 <- sd(myRandomVariables)/sqrt(sampSize)
+sdErr1
+hist(mySamp)
+mySamp
+xbar
+# sampling
+n <- 100
+sampSize <- 30
+xbar <- rep(NA, n)
+for(i in 1:10){
+mySamp <- sample(myRandomVariables, size = sampSize)
+xbar[i] <- mean(mySamp)
+}
+xbar
+for(i in 1:10){
+mySamp <- sample(myRandomVariables, size = sampSize)
+xbar[i] <- mean(mySamp)
+xbar[i]
+}
+xbar <- rep(NA, n)
+xbar[1] <- 1
+xbar
+for(i in 1:n){
+mySamp <- sample(myRandomVariables, size = sampSize)
+xbar[i] <- mean(mySamp)
+xbar[i]
+}
+hist(mySamp)
+# sampling
+n <- 100
+sampSize <- 30
+xbar <- rep(NA, n)
+for(i in 1:n){
+mySamp <- sample(myRandomVariables, size = sampSize)
+xbar[i] = mean(mySamp)
+}
+xbar
+hist(xbar)
+hist(xbar, breaks = 20)
+# sampling
+n <- 100
+sampSize <- 30
+xbar <- rep(NA, n)
+for(i in 1:n){
+mySamp <- sample(myRandomVariables, size = sampSize)
+xbar[i] = mean(mySamp)
+}
+sdErr1 <- sd(myRandomVariables)/sqrt(sampSize)
+hist(xbar, breaks = 20)
+samp1DN <- dnorm(xbar, mean = mean(xbar), sd = sd(xbar))
+plot(xbar, samp1DN)
+mean(xbar
+mean(xbar)
+mean(xbar)
+sd(xbar)
+myRandomVariables<-rbeta(10000,5,2)*10
+hist(myRandomVariables)
+mean(myRandomVariables) #7.13
+sd(myRandomVariables) # 1.61
+# standard error = sd / sqrt(sample size)
+myRandomNormalD <- dnorm(myRandomVariables, mean = mean(myRandomVariables), sd = sd(myRandomVariables))
+n <- 100
+sampSize <- 30
+xbar1 <- rep(NA, n)
+for(i in 1:n){
+mySamp <- sample(myRandomVariables, size = sampSize)
+xbar1[i] = mean(mySamp)
+}
+sdErr1 <- sd(myRandomVariables)/sqrt(sampSize)
+mean(xbar1)
+sd(xbar1)
+hist(xbar1, breaks = 20)
+plot(xbar1, samp1DN)
+samp1DN <- dnorm(xbar1, mean = mean(xbar1), sd = sd(xbar1))
+plot(xbar1, samp1DN)
+# sampling 2
+n2 <- 1000
+sampSize2 <- 30
+xbar2 <- rep(NA, n)
+for(i in 1:n2){
+mySamp <- sample(myRandomVariables, size = sampSize2)
+xbar2[i] = mean(mySamp)
+}
+sdErr1 <- sd(myRandomVariables)/sqrt(sampSize)
+sdErr1
+mean(xbar2)
+sd(xbar2)
+hist(xbar2, breaks = 20)
+samp2DN <- dnorm(xbar2, mean = mean(xbar2), sd = sd(xbar2))
+plot(xbar2, samp2DN)
+# sampling 3
+n3 <- 10000
+sampSize3 <- 30
+xbar3 <- rep(NA, n)
+for(i in 1:n3){
+mySamp <- sample(myRandomVariables, size = sampSize3)
+xbar3[i] = mean(mySamp)
+}
+sdErr1 <- sd(myRandomVariables)/sqrt(sampSize)
+sdErr1
+mean(xbar3)
+sd(xbar3)
+hist(xbar3, breaks = 20)
+samp3DN <- dnorm(xbar3, mean = mean(xbar3), sd = sd(xbar3))
+plot(xbar3, samp3DN)
+# sampling 4
+n4 <- 10000
+sampSize4 <- 200
+xbar4 <- rep(NA, n)
+for(i in 1:n4){
+mySamp <- sample(myRandomVariables, size = sampSize4)
+xbar4[i] = mean(mySamp)
+}
+sdErr4 <- sd(myRandomVariables)/sqrt(sampSize4)
+sdErr4
+mean(xbar4)
+sd(xbar4)
+hist(xbar4, breaks = 20)
+samp4DN <- dnorm(xbar4, mean = mean(xbar4), sd = sd(xbar4))
+plot(xbar4, samp4DN)
+setwd("E:/Desktop Backups/17 Desktop 9Sep18/iPrimed/TTT/DAY 3/Session 1/code")
+a <- c(10, 8, 7, 12, 9, 6, 7, 8)
+mean(a)
+mu <- 13
+var <- 16
+z.test = function(a, mu, var){
+zeta = (mean(a) - mu) / (sqrt(var / length(a)))
+return(zeta)
+}
+z.test(a, mu, var)
+t.test(a, mu = 13, alternative = "two.sided", con.level = 0.95)
+num_flip <- 0:1000
+tot <- 1000
+prb <- 0.5
+y <- dbinom(num_flip,tot,prb)
+y
+y[450]
+class(y)
+barplot(y)
+df <- data.frame(num_flip,y)
+View(df)
+View(df)
+num_flip <- 0:3
+tot <- 3
+prb <- 0.5
+y <- dbinom(num_flip,tot,prb)
+y
+y[2]
+y[4]
+num_flip <- 0:5
+tot <- 3
+prb <- 0.5
+y <- dbinom(num_flip,tot,prb)
+y
+y[4]
+class(y)
+barplot(y)
+# Poisson
+dpois(7,10)
+sum(dpois(0:10,10))
+y <- dpois(0:7,10)
+sum(y)
+poi <- dpois(0:40,10)
+barplot(poi)
+sum(poi, na.rm = TRUE)
+poi
+# Poisson
+dpois(7,10)
+# Poisson
+dpois(7,10)
+sum(dpois(0:10,10))
+sum(poi, na.rm = TRUE)
+pois <- sum(dpois(0:10,10))
+resu <- 1- pois
+resu
+###negative binomial
+dnbinom(10-3, size = 3, prob = 0.09)
+##### Geometric distribution
+dgeom(6,0.3)
+# sampling 1
+n <- 100
+sampSize <- 30
+xbar1 <- rep(NA, n)
+for(i in 1:n){
+mySamp <- sample(myRandomVariables, size = sampSize)
+xbar1[i] = mean(mySamp)
+}
+myRandomVariables<-rbeta(10000,5,2)*10
+# sampling 1
+n <- 100
+sampSize <- 30
+xbar1 <- rep(NA, n)
+for(i in 1:n){
+mySamp <- sample(myRandomVariables, size = sampSize)
+xbar1[i] = mean(mySamp)
+}
+sdErr1 <- sd(myRandomVariables)/sqrt(sampSize)
+sdErr1
+mean(xbar1)
+sd(xbar1)
+setwd("E:/Desktop Backups/17 Desktop 9Sep18/iPrimed/TTT/DAY 3/Session 1/code")
+sd(x)
+x <- 1:100
+sd(x)
+myRandomVariables<-rbeta(10000,5,2)*10
+hist(myRandomVariables)
+mean(myRandomVariables) #7.13
+sd(myRandomVariables) # 1.61
+myRandomNormalD <- dnorm(myRandomVariables, mean = mean(myRandomVariables), sd = sd(myRandomVariables))
+plot(myRandomVariables,myRandomNormalD)
+# sampling 1
+n <- 100
+sampSize <- 30
+xbar1 <- rep(NA, n)
+xbar1
+for(i in 1:n){
+mySamp <- sample(myRandomVariables, size = sampSize)
+xbar1[i] = mean(mySamp)
+}
+xbar1
+mean(xbar1)
+sd(xbar1)
+sdErr1 <- sd(myRandomVariables)/sqrt(sampSize)
+sdErr1
+hist(xbar1, breaks = 20)
+samp1DN <- dnorm(xbar1, mean = mean(xbar1), sd = sd(xbar1))
+plot(xbar1, samp1DN)
+# sampling 2
+n2 <- 1000
+sampSize2 <- 30
+xbar2 <- rep(NA, n)
+for(i in 1:n2){
+mySamp <- sample(myRandomVariables, size = sampSize2)
+xbar2[i] = mean(mySamp)
+}
+sdErr1 <- sd(myRandomVariables)/sqrt(sampSize)
+sdErr1
+mean(xbar2)
+sd(xbar2)
+hist(xbar2, breaks = 20)
+samp2DN <- dnorm(xbar2, mean = mean(xbar2), sd = sd(xbar2))
+plot(xbar2, samp2DN)
+# sampling 3
+n3 <- 10000
+sampSize3 <- 30
+xbar3 <- rep(NA, n)
+for(i in 1:n3){
+mySamp <- sample(myRandomVariables, size = sampSize3)
+xbar3[i] = mean(mySamp)
+}
+sdErr1 <- sd(myRandomVariables)/sqrt(sampSize)
+sdErr1
+mean(xbar3)
+sd(xbar3)
+hist(xbar3, breaks = 20)
+samp3DN <- dnorm(xbar3, mean = mean(xbar3), sd = sd(xbar3))
+plot(xbar3, samp3DN)
+# sampling 4
+n4 <- 10000
+sampSize4 <- 200
+xbar4 <- rep(NA, n)
+for(i in 1:n4){
+mySamp <- sample(myRandomVariables, size = sampSize4)
+xbar4[i] = mean(mySamp)
+}
+sdErr4 <- sd(myRandomVariables)/sqrt(sampSize4)
+sdErr4
+mean(xbar4)
+sd(xbar4)
+hist(xbar4, breaks = 20)
+samp4DN <- dnorm(xbar4, mean = mean(xbar4), sd = sd(xbar4))
+plot(xbar4, samp4DN)
+myRandomVariables
+num_flip <- 0:3
+tot <- 3
+prb <- 0.5
+y <- dbinom(num_flip,tot,prb)
+y
+y[4]
+barplot(y)
+df <- data.frame(num_flip,y)
+df
+num_flip <- 0:1000
+tot <- 1000
+prb <- 0.5
+y <- dbinom(num_flip,tot,prb)
+df <- data.frame(num_flip,y)
+df
+y[451]
+y[51]
+y[1001]
+y[991]
+# Poisson
+dpois(7,10)
+# Poisson
+dpois(5,10)
+# Poisson
+dpois(100,10)
+# Poisson
+dpois(100000,10)
+dpois(0:10,10)
+sum(dpois(0:10,10))
+sum(poi, na.rm = TRUE)
+poi = sum(dpois(0:10,10))
+sum(poi, na.rm = TRUE)
+resu <- 1- pois
+resu <- 1- poi
+resu
+###negative binomial
+dnbinom(10-3, size = 3, prob = 0.09)
+##### Geometric distribution
+dgeom(6,0.3)
+##### Geometric distribution
+dgeom(31,0.3)
+##### Geometric distribution
+dgeom(62,0.3)
+##### Geometric distribution
+dgeom(62,0.3)* 100
+##### Geometric distribution
+as.integer(dgeom(62,0.3))
+##### Geometric distribution
+as.integer(dgeom(1000,0.3))
+##### Geometric distribution
+as.integer(dgeom(3,0.3))
+##### Geometric distribution
+dgeom(3,0.3)
+setwd("E:/Desktop Backups/17 Desktop 9Sep18/iPrimed/TTT/DAY 4/Session 2/codes")
+# Importing the dataset
+dataset = read.csv('Salary_Data.csv')
+# Importing the dataset
+dataset = read.csv('Salary_Data.csv')
+View(dataset)
+# Splitting the dataset into the Training set and Test set
+# install.packages('caTools')
+library(caTools)
+set.seed(123)
+split = sample.split(dataset$Salary, SplitRatio = 2/3)
+training_set = subset(dataset, split == TRUE)
+test_set = subset(dataset, split == FALSE)
+View(training_set)
+#Plot the training data points
+ggplot() +
+geom_point(aes(x = training_set$YearsExperience, y = training_set$Salary),
+colour = 'red') +
+ggtitle('Salary vs Experience (Training set)') +
+xlab('Years of experience') +
+ylab('Salary')
+#Plot the training data points
+library(ggplot2)
+ggplot() +
+geom_point(aes(x = training_set$YearsExperience, y = training_set$Salary),
+colour = 'red') +
+ggtitle('Salary vs Experience (Training set)') +
+xlab('Years of experience') +
+ylab('Salary')
+# Fitting Simple Linear Regression to the Training set
+regressor = lm(formula = Salary ~ YearsExperience,
+data = training_set)
+regressor
+##Model
+summary(regressor)
+# Predicting the Test set results
+y_pred = predict(regressor, newdata = test_set)
+predict(regressor, data.frame(YearsExperience = c(2.9,8.9,7.3)))
+# Visualising the Training set results
+library(ggplot2)
+ggplot() +
+geom_point(aes(x = training_set$YearsExperience, y = training_set$Salary),
+colour = 'red') +
+geom_line(aes(x = training_set$YearsExperience, y = predict(regressor, newdata = training_set)),
+colour = 'blue') +
+ggtitle('Salary vs Experience (Training set)') +
+xlab('Years of experience') +
+ylab('Salary')
+# Visualising the Test set results
+library(ggplot2)
+ggplot() +
+geom_point(aes(x = test_set$YearsExperience, y = test_set$Salary),
+colour = 'red') +
+geom_line(aes(x = training_set$YearsExperience, y = predict(regressor, newdata = training_set)),
+colour = 'blue') +
+ggtitle('Salary vs Experience (Test set)') +
+xlab('Years of experience') +
+ylab('Salary')
+data1 = read.csv("test.csv")
+View(data1)
+ggplot() +
+geom_point(aes(x = data1$verbal, y = data1$maths),
+colour = 'red') +
+ggtitle('Test') +
+xlab('Verbal') +
+ylab('maths')
+lr1 = lm(formula = maths ~ verbal,
+data = data1)
+ggplot() +
+geom_point(aes(x = data1$verbal, y = data1$maths),
+colour = 'red')+
+geom_line(aes(x = data1$verbal, y = predict(lr1, newdata = data1)),
+colour = 'blue') +
+ggtitle('Test') +
+xlab('Verbal') +
+ylab('maths')
+# Importing the dataset
+dataset = read.csv('50_Startups.csv')
+View(dataset)
+# Encoding categorical data
+dataset$State = factor(dataset$State,
+levels = c('New York', 'California', 'Florida'),
+labels = c(1, 2, 3))
+# Splitting the dataset into the Training set and Test set
+# install.packages('caTools')
+library(caTools)
+set.seed(123)
+split = sample.split(dataset$Profit, SplitRatio = 0.8)
+training_set = subset(dataset, split == TRUE)
+test_set = subset(dataset, split == FALSE)
+# Fitting Multiple Linear Regression to the Training set
+regressor = lm(formula = Profit ~ .,
+data = training_set)
+summary(regressor)
+# Predicting the Test set results
+y_pred = predict(regressor, newdata = test_set)
+y_pred
+# Importing the dataset
+dataset = read.csv('Social_Network_Ads.csv')
+setwd("E:/Desktop Backups/17 Desktop 9Sep18/iPrimed/TTT/DAY 4/Session 3/code")
+dataset = dataset[3:5]
+# Encoding the target feature as factor
+dataset$Purchased = factor(dataset$Purchased, levels = c(0, 1))
+# Importing the dataset
+dataset = read.csv('Social_Network_Ads.csv')
+dataset = dataset[3:5]
+# Encoding the target feature as factor
+dataset$Purchased = factor(dataset$Purchased, levels = c(0, 1))
+# Splitting the dataset into the Training set and Test set
+# install.packages('caTools')
+library(caTools)
+set.seed(123)
+split = sample.split(dataset$Purchased, SplitRatio = 0.75)
+training_set = subset(dataset, split == TRUE)
+test_set = subset(dataset, split == FALSE)
+# Feature Scaling
+training_set[-3] = scale(training_set[-3])
+test_set[-3] = scale(test_set[-3])
+# Fitting Logistic Regression to the Training set
+classifier = glm(formula = Purchased ~ .,
+family = binomial,
+data = training_set)
+summary(classifier)
+# Predicting the Test set results
+prob_pred = predict(classifier, type = 'response', newdata = test_set[-3])
+y_pred = ifelse(prob_pred > 0.5, 1, 0)
+# Making the Confusion Matrix
+cm = table(test_set[, 3], y_pred > 0.5)
+cm
+# Making the Confusion Matrix
+cm = table(test_set[, 3], y_pred > 0.5)
+# Visualising the Training set results
+install.packages("ElemStatLearn")
+library(ElemStatLearn)
+set = training_set
+X1 = seq(min(set[, 1]) - 1, max(set[, 1]) + 1, by = 0.01)
+X2 = seq(min(set[, 2]) - 1, max(set[, 2]) + 1, by = 0.01)
+grid_set = expand.grid(X1, X2)
+colnames(grid_set) = c('Age', 'EstimatedSalary')
+prob_set = predict(classifier, type = 'response', newdata = grid_set)
+y_grid = ifelse(prob_set > 0.5, 1, 0)
+plot(set[, -3],
+main = 'Logistic Regression (Training set)',
+xlab = 'Age', ylab = 'Estimated Salary',
+xlim = range(X1), ylim = range(X2))
+contour(X1, X2, matrix(as.numeric(y_grid), length(X1), length(X2)), add = TRUE)
+points(grid_set, pch = '.', col = ifelse(y_grid == 1, 'springgreen3', 'tomato'))
+points(set, pch = 21, bg = ifelse(set[, 3] == 1, 'green4', 'red3'))
